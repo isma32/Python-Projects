@@ -1,0 +1,22 @@
+[flake8]
+# 📏 Tolérer des lignes plus longues (100 caractères au lieu de 79 par défaut)
+max-line-length = 100
+
+# 🚫 Ignorer certaines règles trop strictes ou inutiles
+ignore =
+    E203  # whitespace before ':' (souvent un faux positif avec Black)
+    W503  # line break before binary operator (souvent un faux positif)
+
+# ✅ Garder les règles importantes
+select = E101, E231, E262, E301, E713, F401, F823
+
+# ❌ Exclure les dossiers qui ne doivent pas être vérifiés
+exclude =
+    .git,
+    __pycache__,
+    venv,
+    build,
+    dist
+
+# 🔎 Limiter la complexité cyclomatique (éviter fonctions trop compliquées)
+max-complexity = 10
